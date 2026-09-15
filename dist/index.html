@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lord's Som | Locação de som, painel de LED e iluminação em Curitiba</title>
+<meta name="description" content="Locação de painel de LED, caixas de som, mesa de som, microfones e iluminação para igrejas, casamentos, festas e eventos corporativos em Curitiba e região metropolitana. Com ou sem técnico.">
+<meta name="theme-color" content="#070707">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lord's Som">
+<meta property="og:title" content="Lord's Som — Locação de equipamentos audiovisuais">
+<meta property="og:description" content="Locação de painel de LED, caixas de som, mesa de som, microfones e iluminação para igrejas, casamentos, festas e eventos corporativos em Curitiba e região metropolitana. Com ou sem técnico.">
+<meta property="og:image" content="assets/icon-512.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) — Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18453307548"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18453307548');
+</script>
+<style>
+:root{
+  --bg:#070707;
+  --bg-2:#0d0d0d;
+  --surface:#121212;
+  --surface-2:#181816;
+  --line:rgba(214,176,86,.16);
+  --line-strong:rgba(214,176,86,.34);
+  --gold:#E0B44B;
+  --gold-lt:#F6E2A4;
+  --gold-dp:#9C7420;
+  --ink:#F4F2ED;
+  --muted:#A5A199;
+  --muted-2:#7C7871;
+  --r:14px;
+  --maxw:1180px;
+  --grad:linear-gradient(135deg,#8C6415 0%,#E0B44B 28%,#F9EDBE 50%,#D5A63C 72%,#8C6415 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:Barlow,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.display{font-family:Anton,Impact,system-ui,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.gold-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 14px}
+.lede{color:var(--muted);font-size:17px;max-width:62ch}
+.hr-gold{height:1px;background:linear-gradient(90deg,transparent,var(--line-strong),transparent);border:0;margin:0}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:52px;padding:14px 26px;border-radius:10px;border:1px solid transparent;
+  font-weight:700;font-size:15px;letter-spacing:.01em;cursor:pointer;
+  transition:transform .18s cubic-bezier(.2,.8,.3,1),box-shadow .18s ease,background .18s ease,border-color .18s ease;
+  text-align:center;
+}
+.btn:active{transform:scale(.975)}
+.btn-primary{background:var(--grad);color:#150F02;box-shadow:0 10px 30px -12px rgba(224,180,75,.7)}
+.btn-primary:hover{box-shadow:0 14px 40px -12px rgba(224,180,75,.9);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line-strong);color:var(--ink);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(224,180,75,.08)}
+.btn svg{width:19px;height:19px;flex:none}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:0;z-index:100;background:rgba(7,7,7,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-in{display:flex;align-items:center;gap:20px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-family:Anton,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:19px}
+.brand img{width:34px;height:auto}
+.brand span{color:var(--gold-lt)}
+.brand em{font-style:normal;color:var(--muted);font-size:12px;letter-spacing:.2em;align-self:flex-end;padding-bottom:3px}
+.nav-links{display:none;gap:26px;margin-left:auto;font-size:14px;font-weight:500;color:var(--muted)}
+.nav-links a{padding:6px 0;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+.nav-links a:hover{color:var(--ink);border-color:var(--gold)}
+.nav-cta{margin-left:auto}
+.nav-cta .btn{min-height:44px;padding:10px 18px;font-size:14px}
+@media(min-width:960px){
+  .nav-links{display:flex}
+  .nav-cta{margin-left:0}
+}
+@media(max-width:520px){.nav-cta .btn span{display:none}.nav-cta .btn{padding:10px 14px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:64px 0 72px;overflow:hidden;text-align:center}
+.hero::before{
+  content:"";position:absolute;inset:-30% -20% auto;height:820px;
+  background:radial-gradient(58% 52% at 50% 22%,rgba(224,180,75,.20),rgba(224,180,75,.05) 45%,transparent 72%);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--line-strong),transparent);
+}
+.hero-in{position:relative}
+.hero-logo{width:min(430px,80vw);margin:0 auto 34px;filter:drop-shadow(0 8px 40px rgba(224,180,75,.28))}
+.hero h1{font-size:clamp(34px,7.4vw,66px);margin:0 0 20px}
+.hero h1 .l2{display:block}
+.hero p.lede{margin:0 auto;font-size:clamp(16px,2.4vw,19px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:34px 0 0}
+.hero-cta .btn{flex:1 1 240px;max-width:320px}
+
+.trust{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust div{background:var(--bg);padding:20px 22px;display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted);font-weight:500}
+.trust svg{width:20px;height:20px;color:var(--gold);flex:none}
+.trust b{color:var(--ink);font-weight:600}
+@media(min-width:760px){.trust{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- sections ---------- */
+section{padding:76px 0}
+.sec-head{max-width:760px;margin:0 0 44px}
+.sec-head h2{font-size:clamp(28px,5.2vw,46px);margin:0 0 16px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .lede{margin-left:auto;margin-right:auto}
+
+/* ---------- equipment grid ---------- */
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1020px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{
+  background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);
+  border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;
+  transition:border-color .2s ease,transform .2s ease,background .2s ease;
+  position:relative;overflow:hidden;
+}
+.card:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+.card .ico{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;background:rgba(224,180,75,.10);border:1px solid var(--line);margin-bottom:18px}
+.card .ico svg{width:24px;height:24px;color:var(--gold)}
+.card h3{font-size:19px;margin:0 0 10px;font-weight:700;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.6}
+.card ul{margin:14px 0 0;padding:0;list-style:none;font-size:13.5px;color:var(--muted-2)}
+.card ul li{padding:5px 0 5px 18px;position:relative}
+.card ul li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:6px;border-radius:50%;background:var(--gold-dp)}
+
+/* ---------- split (tecnico) ---------- */
+.split{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:820px){.split{grid-template-columns:1fr 1fr}}
+.opt{border:1px solid var(--line);border-radius:var(--r);padding:32px 26px;background:var(--surface)}
+.opt.featured{border-color:var(--line-strong);background:linear-gradient(180deg,rgba(224,180,75,.07),var(--surface) 60%)}
+.tag{display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:5px 11px;border-radius:999px;border:1px solid var(--line-strong);color:var(--gold);margin-bottom:16px}
+.opt h3{font-size:24px;margin:0 0 10px;font-weight:700}
+.opt > p{color:var(--muted);margin:0 0 20px;font-size:15px}
+.opt ul{margin:0;padding:0;list-style:none}
+.opt ul li{display:flex;gap:11px;padding:9px 0;font-size:14.5px;color:var(--ink);border-top:1px solid rgba(255,255,255,.05)}
+.opt ul li:first-child{border-top:0}
+.opt ul li svg{width:18px;height:18px;color:var(--gold);flex:none;margin-top:3px}
+
+/* ---------- igreja ---------- */
+.igreja{background:
+  radial-gradient(70% 100% at 50% 0%,rgba(224,180,75,.10),transparent 70%),
+  var(--bg-2);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.igreja-grid{display:grid;gap:36px;grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){.igreja-grid{grid-template-columns:1.05fr .95fr;gap:56px}}
+.igreja-seal{width:min(300px,68vw);margin:0 auto;filter:drop-shadow(0 10px 44px rgba(224,180,75,.3))}
+.verse{border-left:2px solid var(--gold-dp);padding:6px 0 6px 20px;margin:26px 0 0;color:var(--muted);font-style:italic;font-size:15px}
+.verse b{display:block;font-style:normal;color:var(--gold);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-top:8px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 0}
+.chip{font-size:13px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.02)}
+
+/* ---------- eventos ---------- */
+.ev{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:600px){.ev{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.ev{grid-template-columns:repeat(4,1fr)}}
+.ev-item{border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;background:var(--surface)}
+.ev-item svg{width:26px;height:26px;color:var(--gold);margin-bottom:14px}
+.ev-item h3{font-size:17px;margin:0 0 8px;font-weight:700}
+.ev-item p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+
+/* ---------- passos ---------- */
+.steps{display:grid;gap:0;grid-template-columns:1fr;counter-reset:s}
+@media(min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{padding:28px 24px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);position:relative;margin-bottom:14px}
+@media(min-width:900px){.step{margin-bottom:0;border-radius:0;border-right:0}
+ .step:first-child{border-radius:var(--r) 0 0 var(--r)}
+ .step:last-child{border-radius:0 var(--r) var(--r) 0;border-right:1px solid var(--line)}}
+.step .n{font-family:Anton,sans-serif;font-size:34px;line-height:1;margin-bottom:14px}
+.step h3{font-size:16.5px;margin:0 0 8px;font-weight:700}
+.step p{margin:0;font-size:14px;color:var(--muted);line-height:1.6}
+
+/* ---------- cobertura ---------- */
+.cob{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.city-list{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 0;padding:0;list-style:none}
+.city-list li{font-size:13.5px;padding:8px 15px;border:1px solid var(--line);border-radius:8px;color:var(--muted);background:var(--surface)}
+.city-list li.primary{border-color:var(--gold);color:var(--gold-lt);background:rgba(224,180,75,.08);font-weight:600}
+
+/* ---------- faq ---------- */
+.faq{max-width:840px;margin:0 auto}
+details{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:10px;overflow:hidden}
+details[open]{border-color:var(--line-strong)}
+summary{
+  cursor:pointer;list-style:none;padding:20px 54px 20px 22px;font-weight:600;font-size:16px;
+  position:relative;min-height:44px;display:flex;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"";position:absolute;right:22px;top:50%;width:11px;height:11px;
+  border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);
+  transform:translateY(-70%) rotate(45deg);transition:transform .2s ease;
+}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details .a{padding:0 22px 22px;color:var(--muted);font-size:15px;line-height:1.7}
+
+/* ---------- form ---------- */
+.form-wrap{background:
+  radial-gradient(60% 90% at 50% 0%,rgba(224,180,75,.10),transparent 70%),var(--bg-2);
+  border-top:1px solid var(--line)}
+form{max-width:760px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px 24px}
+@media(min-width:700px){form{padding:38px 36px}}
+.field{margin-bottom:20px}
+.field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.field label .req{color:var(--gold)}
+.field .hint{font-size:12.5px;color:var(--muted-2);margin-top:6px}
+.field input,.field select,.field textarea{
+  width:100%;min-height:50px;background:#0B0B0B;border:1px solid rgba(255,255,255,.10);
+  border-radius:10px;padding:13px 15px;color:var(--ink);font:inherit;font-size:16px;
+  transition:border-color .15s ease,box-shadow .15s ease;
+}
+.field textarea{min-height:104px;resize:vertical;line-height:1.6}
+.field input::placeholder,.field textarea::placeholder{color:#5E5B55}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(224,180,75,.16)}
+.field.err input,.field.err select{border-color:#E3705C}
+.err-msg{display:none;color:#E3705C;font-size:13px;margin-top:6px;font-weight:500}
+.field.err .err-msg{display:block}
+.row2{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:600px){.row2{grid-template-columns:1fr 1fr}}
+fieldset{border:0;padding:0;margin:0 0 20px}
+legend{font-size:13.5px;font-weight:600;margin-bottom:10px;padding:0;color:var(--ink)}
+.checks{display:grid;gap:8px;grid-template-columns:1fr}
+@media(min-width:560px){.checks{grid-template-columns:1fr 1fr}}
+.check{display:flex;align-items:center;gap:10px;min-height:46px;padding:10px 14px;border:1px solid rgba(255,255,255,.09);border-radius:10px;cursor:pointer;font-size:14.5px;background:#0B0B0B;transition:border-color .15s,background .15s}
+.check:hover{border-color:var(--line-strong)}
+.check input{width:18px;height:18px;accent-color:#E0B44B;flex:none;min-height:0}
+.check:has(input:checked){border-color:var(--gold);background:rgba(224,180,75,.09)}
+form .btn{width:100%;margin-top:6px}
+.form-note{text-align:center;font-size:13px;color:var(--muted-2);margin:16px 0 0}
+
+/* ---------- footer ---------- */
+footer{background:#040404;border-top:1px solid var(--line);padding:56px 0 34px}
+.f-grid{display:grid;gap:34px;grid-template-columns:1fr}
+@media(min-width:820px){.f-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.f-logo{width:210px;margin-bottom:18px}
+footer h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;font-weight:600}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:11px}
+footer a,footer p{color:var(--muted);font-size:14.5px}
+footer a{display:inline-flex;align-items:center;gap:9px;min-height:28px;transition:color .15s}
+footer a:hover{color:var(--gold-lt)}
+footer a svg{width:17px;height:17px;color:var(--gold);flex:none}
+.f-bottom{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.06);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:12.5px;color:var(--muted-2)}
+
+/* ---------- float whatsapp ---------- */
+.float-wa{
+  position:fixed;right:16px;bottom:16px;z-index:90;
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--grad);color:#150F02;font-weight:700;font-size:14.5px;
+  padding:14px 20px;border-radius:999px;min-height:54px;
+  box-shadow:0 12px 34px -10px rgba(0,0,0,.8),0 0 0 1px rgba(224,180,75,.4);
+  transition:transform .2s cubic-bezier(.2,.8,.3,1);
+}
+.float-wa:hover{transform:translateY(-3px)}
+.float-wa svg{width:22px;height:22px}
+@media(max-width:640px){.float-wa span{display:none}.float-wa{padding:15px;border-radius:50%}}
+
+/* headings breathe */
+h1,h2,h3{text-wrap:balance}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Lord's Som",
+  "description": "Locação de equipamentos audiovisuais — painel de LED, som, microfones e iluminação — em Curitiba e região metropolitana.",
+  "image": "assets/icon-512.png",
+  "telephone": "+5543988682680",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Mal. Floriano Peixoto, 2610",
+    "addressLocality": "Curitiba",
+    "addressRegion": "PR",
+    "postalCode": "80220-000",
+    "addressCountry": "BR"
+  },
+  "areaServed": [
+    {"@type":"City","name":"Curitiba"},
+    {"@type":"City","name":"São José dos Pinhais"},
+    {"@type":"City","name":"Colombo"},
+    {"@type":"City","name":"Pinhais"},
+    {"@type":"City","name":"Araucária"},
+    {"@type":"City","name":"Campo Largo"}
+  ],
+  "priceRange": "$$",
+  "knowsAbout": ["Locação de painel de LED","Locação de som","Locação de iluminação","Locação de microfones","Sonorização de eventos"]
+}</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#topo" class="brand" aria-label="Lord's Som — início">
+      <img src="assets/crown.webp" alt="">
+      <span>Lord's</span><em>Som</em>
+    </a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#equipamentos">Equipamentos</a>
+      <a href="#tecnico">Com técnico</a>
+      <a href="#igrejas">Igrejas</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" data-wa href="#orcamento">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.76 2.68 4.26 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+        <span>Pedir orçamento</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="topo">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <img class="hero-logo" src="assets/logo-h.webp" alt="Lord's Som — locação de equipamentos audiovisuais">
+    <h1 class="display">Seu evento não pode<span class="l2 gold-text">falhar no som.</span></h1>
+    <p class="lede">Locação de painel de LED, som, iluminação e microfones em Curitiba e região metropolitana. Equipamento montado, testado e entregue funcionando — com ou sem técnico no local.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" data-wa href="#orcamento">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.76 2.68 4.26 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#equipamentos">Ver equipamentos</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Curitiba e região metropolitana.</b> Entrega, montagem e retirada.</span></div>
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 12 2 2 4-4"/><path d="M12 3 4 6v6c0 5 3.4 8.6 8 9 4.6-.4 8-4 8-9V6l-8-3Z"/></svg><span><b>Testado antes de começar.</b> Nada de improviso na hora.</span></div>
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span><b>Com ou sem técnico.</b> Você escolhe como quer operar.</span></div>
+</div>
+
+<!-- ============ EQUIPAMENTOS ============ -->
+<section id="equipamentos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">O que alugamos</p>
+      <h2 class="display">Estrutura completa.<br><span class="gold-text">Sem juntar pedaço de três fornecedores.</span></h2>
+      <p class="lede">Som, imagem e luz saem do mesmo lugar, chegam juntos e conversam entre si. Um contato, uma equipe, uma responsabilidade.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01"/><path d="M8 22h8"/></svg></div>
+        <h3>Painel de LED</h3>
+        <p>Telão que aparece mesmo com luz no ambiente. Letra de música, vídeo, transmissão ao vivo, arte do evento.</p>
+        <ul><li>Módulos montados na medida do palco</li><li>Alta luminosidade, leitura em ambiente claro</li><li>Entrada para notebook, câmera e mesa de vídeo</li></ul>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="14" r="4"/><circle cx="12" cy="6" r="1.5"/></svg></div>
+        <h3>Caixas de som</h3>
+        <p>Potência dimensionada pelo tamanho do público e do espaço. Som que cobre o salão inteiro sem estourar em quem está na frente.</p>
+        <ul><li>Sistemas ativos e line array</li><li>Subgrave para música ao vivo</li><li>Retornos de palco para a banda</li></ul>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3"/><path d="M1 14h6M9 8h6M17 16h6"/></svg></div>
+        <h3>Mesas de som</h3>
+        <p>Mesa digital ou analógica conforme a complexidade. Canal separado para cada microfone, instrumento e fonte de áudio.</p>
+        <ul><li>Mesas digitais com cena salva</li><li>Gravação multipista do evento</li><li>Envio de áudio limpo para live e câmera</li></ul>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg></div>
+        <h3>Microfones</h3>
+        <p>Sem fio de verdade — sem chiado, sem cortar no meio da fala. Para pregação, cerimônia, discurso e banda.</p>
+        <ul><li>Sem fio de mão, headset e lapela</li><li>Microfones com fio e para instrumentos</li><li>Pedestais e cabeamento inclusos</li></ul>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v3M4.2 6.2l2.1 2.1M2 14h3M19 14h3M17.7 8.3l2.1-2.1"/><path d="M9 21h6M8.5 17.5A6 6 0 1 1 15.5 17.5"/></svg></div>
+        <h3>Iluminação e estrobos</h3>
+        <p>Luz que constrói clima e entrega imagem boa na câmera. Do culto sóbrio à pista de dança.</p>
+        <ul><li>Moving head, par LED e estrobo</li><li>Mesa de luz com cenas programadas</li><li>Máquina de fumaça e efeitos</li></ul>
+      </article>
+
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21 9 3M21 21 15 3M6.5 12h11"/><path d="M2 21h20"/></svg></div>
+        <h3>Estrutura e energia</h3>
+        <p>O que sustenta tudo e ninguém lembra de pedir — até faltar. Já vai junto no orçamento.</p>
+        <ul><li>Tripés, box truss e praticáveis</li><li>Cabeamento, réguas e extensões</li><li>Distribuição de energia dimensionada</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="hr-gold">
+
+<!-- ============ COM/SEM TÉCNICO ============ -->
+<section id="tecnico">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Duas formas de contratar</p>
+      <h2 class="display">Com técnico ou <span class="gold-text">sem técnico</span></h2>
+      <p class="lede">Se você tem equipe treinada, entregamos o equipamento pronto e saímos do caminho. Se não tem, alguém nosso fica lá até a última música.</p>
+    </div>
+
+    <div class="split">
+      <article class="opt featured rv">
+        <span class="tag">Mais contratado</span>
+        <h3>Com técnico</h3>
+        <p>Nossa equipe opera do começo ao fim. Você cuida do evento, não do cabo.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Montagem, passagem de som e teste antes do público entrar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Operação de som e luz durante todo o evento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ajuste em tempo real quando o roteiro muda</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Problema técnico é nosso, não seu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Desmontagem ao final</li>
+        </ul>
+      </article>
+
+      <article class="opt rv">
+        <span class="tag">Autonomia total</span>
+        <h3>Sem técnico</h3>
+        <p>Para igreja e produtora que já tem equipe própria e só precisa do equipamento certo.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Entrega no local com tudo conferido</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Orientação de ligação para a sua equipe</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Cabeamento completo, sem faltar peça</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Suporte por telefone durante o evento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Retirada combinada no dia seguinte</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IGREJAS ============ -->
+<section id="igrejas" class="igreja">
+  <div class="wrap">
+    <div class="igreja-grid">
+      <div class="rv">
+        <p class="eyebrow">Para igrejas</p>
+        <h2 class="display" style="font-size:clamp(28px,5.2vw,44px);margin:0 0 18px">A palavra precisa<br><span class="gold-text">chegar até o fundo.</span></h2>
+        <p class="lede">Culto, conferência, célula ampliada, batismo, casamento na igreja, evento de jovens. Ninguém deveria perder metade da mensagem porque o microfone falhou ou porque a letra não aparecia no telão.</p>
+        <p class="lede" style="margin-top:16px">O nome da empresa não é decoração. <b style="color:var(--ink)">Lord's</b> é de onde a gente parte: servir bem, entregar com excelência e tratar o compromisso com seriedade.</p>
+
+        <div class="chips">
+          <span class="chip">Culto e celebração</span>
+          <span class="chip">Conferência e congresso</span>
+          <span class="chip">Evento de jovens</span>
+          <span class="chip">Batismo e cerimônia</span>
+          <span class="chip">Transmissão ao vivo</span>
+          <span class="chip">Evento ao ar livre</span>
+        </div>
+
+        <blockquote class="verse">
+          "Tudo o que fizerem, façam de todo o coração, como para o Senhor."
+          <b>Colossenses 3:23</b>
+        </blockquote>
+
+        <div style="margin-top:30px">
+          <a class="btn btn-primary" data-wa data-msg="igreja" href="#orcamento">Montar estrutura para a minha igreja</a>
+        </div>
+      </div>
+      <div class="rv">
+        <img class="igreja-seal" src="assets/logo-seal.webp" alt="Selo Lord's Som — locação de equipamentos audiovisuais em Curitiba e região metropolitana">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENTOS ============ -->
+<section id="eventos">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Também atendemos</p>
+      <h2 class="display">Cada evento tem<br><span class="gold-text">uma exigência diferente.</span></h2>
+      <p class="lede">O equipamento muda conforme o público, o espaço e o roteiro. O orçamento é montado em cima do seu evento — não em cima de um pacote pronto.</p>
+    </div>
+    <div class="ev">
+      <article class="ev-item rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg>
+        <h3>Casamento</h3>
+        <p>Cerimônia com som limpo, recepção com pista de dança e luz que valoriza a decoração e o vídeo.</p>
+      </article>
+      <article class="ev-item rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M6 21V9l6-5 6 5v12"/><path d="M10 21v-5h4v5"/></svg>
+        <h3>Aniversário e formatura</h3>
+        <p>Do 15 anos ao aniversário de 50. Painel de LED para retrospectiva e som que aguenta a festa até o fim.</p>
+      </article>
+      <article class="ev-item rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <h3>Evento corporativo</h3>
+        <p>Convenção, treinamento, palestra e lançamento. Slide legível, microfone que não falha, gravação do conteúdo.</p>
+      </article>
+      <article class="ev-item rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <h3>Show e festa</h3>
+        <p>Banda ao vivo, DJ, festa de rua ou evento de bairro. PA dimensionado, retorno de palco e luz de show.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="hr-gold">
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section id="como">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Como funciona</p>
+      <h2 class="display">Quatro passos.<br><span class="gold-text">Sem enrolação no meio.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n gold-text">01</div><h3>Você conta o evento</h3><p>Data, local, quantas pessoas e o que vai acontecer. Dois minutos no WhatsApp resolvem.</p></div>
+      <div class="step rv"><div class="n gold-text">02</div><h3>Recebe o orçamento</h3><p>Lista do que vai, valor fechado e o que está incluso. Sem taxa que aparece depois.</p></div>
+      <div class="step rv"><div class="n gold-text">03</div><h3>Montamos e testamos</h3><p>Chegamos antes, montamos, passamos som e deixamos rodando antes do público entrar.</p></div>
+      <div class="step rv"><div class="n gold-text">04</div><h3>Seu evento acontece</h3><p>Com técnico operando ou sua equipe no comando. No fim, desmontamos e vamos embora.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COBERTURA ============ -->
+<section id="cobertura" class="cob">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Área de atendimento</p>
+      <h2 class="display">Curitiba e <span class="gold-text">região metropolitana</span></h2>
+      <p class="lede">Atendemos a capital e as cidades vizinhas. Fora dessa área, consulte — dependendo da data e do porte do evento, a gente vai.</p>
+    </div>
+    <ul class="city-list rv">
+      <li class="primary">Curitiba</li>
+      <li>São José dos Pinhais</li>
+      <li>Colombo</li>
+      <li>Pinhais</li>
+      <li>Araucária</li>
+      <li>Almirante Tamandaré</li>
+      <li>Campo Largo</li>
+      <li>Piraquara</li>
+      <li>Fazenda Rio Grande</li>
+      <li>Quatro Barras</li>
+      <li>Campina Grande do Sul</li>
+      <li>Campo Magro</li>
+      <li>Itaperuçu</li>
+      <li>Rio Branco do Sul</li>
+      <li>Mandirituba</li>
+      <li>Contenda</li>
+      <li>Balsa Nova</li>
+      <li>Bocaiúva do Sul</li>
+    </ul>
+    <p style="margin:28px 0 0;color:var(--muted);font-size:15px;display:inline-flex;gap:10px;align-items:flex-start">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:19px;height:19px;color:var(--gold);flex:none;margin-top:3px" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg>
+      Base de operação: <span data-endereco style="color:var(--ink)">Curitiba — PR</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Dúvidas</p>
+      <h2 class="display">O que perguntam <span class="gold-text">antes de fechar</span></h2>
+    </div>
+    <div class="faq">
+      <details class="rv"><summary>Vocês entregam e montam, ou eu preciso buscar?</summary><div class="a">Entregamos, montamos e desmontamos. O equipamento chega antes do horário combinado, é montado e testado com o local ainda vazio. Você não carrega caixa nem monta tripé.</div></details>
+      <details class="rv"><summary>Preciso contratar técnico junto?</summary><div class="a">Não é obrigatório. Se a sua equipe já opera som e luz, entregamos o equipamento pronto com orientação de ligação e suporte por telefone durante o evento. Se não tem equipe, o técnico é a escolha certa — ele fica do início ao fim.</div></details>
+      <details class="rv"><summary>Com quanto tempo de antecedência devo reservar?</summary><div class="a">Quanto antes, melhor — principalmente em fim de semana, dezembro e temporada de casamento e formatura. A data só fica bloqueada depois da confirmação. Se o evento é para logo, chame no WhatsApp mesmo assim: se tiver equipamento livre, a gente atende.</div></details>
+      <details class="rv"><summary>Como vocês definem o que é necessário?</summary><div class="a">Pelo número de pessoas, pelo tamanho e formato do espaço, se é aberto ou fechado, e pelo que vai acontecer no palco. Fala ao vivo, banda completa e DJ pedem estruturas diferentes. Por isso o orçamento é montado caso a caso e não vendido em pacote fechado.</div></details>
+      <details class="rv"><summary>Dá para usar painel de LED em local aberto ou de dia?</summary><div class="a">Dá. O painel de LED tem luminosidade muito superior à de um projetor, então continua legível com claridade. Para evento ao ar livre confirmamos o modelo, a fixação e a proteção contra chuva na hora do orçamento.</div></details>
+      <details class="rv"><summary>Qual a duração da locação?</summary><div class="a">O padrão é a diária do evento, incluindo montagem antes e desmontagem depois. Eventos de vários dias, congressos e conferências têm condição própria — informe as datas no orçamento.</div></details>
+      <details class="rv"><summary>E se algum equipamento apresentar problema no meio do evento?</summary><div class="a">Levamos redundância nos itens críticos e o técnico resolve no local. É exatamente por isso que montamos e testamos com antecedência: falha se resolve antes do público chegar, não durante.</div></details>
+      <details class="rv"><summary>Vocês fazem transmissão ao vivo?</summary><div class="a">Entregamos a estrutura que a transmissão precisa: áudio limpo enviado da mesa para a câmera ou para o computador, painel de LED e iluminação adequada para imagem. Sobre captação e operação de vídeo, consulte pelo WhatsApp.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section id="orcamento" class="form-wrap">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Orçamento</p>
+      <h2 class="display">Conta do seu evento.<br><span class="gold-text">A gente monta a estrutura.</span></h2>
+      <p class="lede">Preencha e o WhatsApp abre com tudo já escrito. Você só aperta enviar.</p>
+    </div>
+
+    <form id="f" name="orcamento" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="orcamento">
+      <p hidden aria-hidden="true"><label>Não preencha este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="row2">
+        <div class="field">
+          <label for="nome">Seu nome <span class="req">*</span></label>
+          <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Nome e sobrenome" required>
+          <p class="err-msg">Preencha seu nome.</p>
+        </div>
+        <div class="field">
+          <label for="fone">WhatsApp <span class="req">*</span></label>
+          <input id="fone" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(41) 90000-0000" required>
+          <p class="err-msg">Informe um telefone com DDD.</p>
+        </div>
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label for="tipo">Tipo de evento <span class="req">*</span></label>
+          <select id="tipo" name="tipo-evento" required>
+            <option value="">Selecione</option>
+            <option>Culto / evento de igreja</option>
+            <option>Casamento</option>
+            <option>Aniversário</option>
+            <option>Formatura</option>
+            <option>Evento corporativo</option>
+            <option>Show / festa</option>
+            <option>Outro</option>
+          </select>
+          <p class="err-msg">Escolha o tipo de evento.</p>
+        </div>
+        <div class="field">
+          <label for="data">Data do evento</label>
+          <input id="data" name="data-evento" type="date">
+          <p class="hint">Ainda não definiu? Deixe em branco.</p>
+        </div>
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label for="local">Cidade / local</label>
+          <input id="local" name="local" type="text" placeholder="Ex.: Curitiba — Salão da igreja, Bairro Portão">
+        </div>
+        <div class="field">
+          <label for="pessoas">Quantidade de pessoas</label>
+          <input id="pessoas" name="pessoas" type="number" inputmode="numeric" min="1" placeholder="Ex.: 200">
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>O que você precisa</legend>
+        <div class="checks">
+          <label class="check"><input type="checkbox" name="equipamentos" value="Painel de LED"> Painel de LED</label>
+          <label class="check"><input type="checkbox" name="equipamentos" value="Caixas de som"> Caixas de som</label>
+          <label class="check"><input type="checkbox" name="equipamentos" value="Mesa de som"> Mesa de som</label>
+          <label class="check"><input type="checkbox" name="equipamentos" value="Microfones"> Microfones</label>
+          <label class="check"><input type="checkbox" name="equipamentos" value="Iluminação e estrobos"> Iluminação e estrobos</label>
+          <label class="check"><input type="checkbox" name="equipamentos" value="Estrutura e energia"> Estrutura e energia</label>
+          <label class="check"><input type="checkbox" name="equipamentos" value="Ainda não sei — preciso de orientação"> Não sei, me orienta</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Operação</legend>
+        <div class="checks">
+          <label class="check"><input type="radio" name="operacao" value="Com técnico" checked> Com técnico</label>
+          <label class="check"><input type="radio" name="operacao" value="Sem técnico"> Sem técnico</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="obs">Detalhes do evento</label>
+        <textarea id="obs" name="detalhes" placeholder="Banda ao vivo? Ao ar livre? Transmissão? Horário de montagem? Escreva o que for importante."></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.76 2.68 4.26 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+      <p class="form-note" role="status" aria-live="polite" id="fnote">Resposta no mesmo dia útil.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img class="f-logo" src="assets/logo-h.webp" alt="Lord's Som">
+        <p style="max-width:36ch;margin:0">Locação de equipamentos audiovisuais para igrejas, casamentos, festas e eventos corporativos em Curitiba e região metropolitana.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#equipamentos">Equipamentos</a></li>
+          <li><a href="#tecnico">Com ou sem técnico</a></li>
+          <li><a href="#igrejas">Para igrejas</a></li>
+          <li><a href="#eventos">Tipos de evento</a></li>
+          <li><a href="#cobertura">Área de atendimento</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a data-wa href="#orcamento"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.76 2.68 4.26 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg><span data-fone>WhatsApp</span></a></li>
+          <li><a data-email href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg><span data-emailtxt>E-mail</span></a></li>
+          <li><a data-ig href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span data-igtxt>Instagram</span></a></li>
+          <li><span style="display:inline-flex;gap:9px;align-items:flex-start;color:var(--muted);font-size:14.5px;max-width:30ch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:17px;height:17px;color:var(--gold);flex:none;margin-top:4px" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-endereco>Curitiba — PR</span></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="yr">2026</span> Lord's Som — Locação de equipamentos audiovisuais.</span>
+      <span>Curitiba e região metropolitana</span>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" data-wa href="#orcamento" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.76 2.68 4.26 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+/* ==========================================================
+   CONTATO — troque só aqui e o site inteiro atualiza
+   ========================================================== */
+const CONTATO = {
+  whatsapp: "5543988682680",               // só números, com 55 + DDD
+  whatsappLabel: "(43) 98868-2680",
+  email: "",                               // deixe "" para esconder do site
+  instagram: "",                           // sem o @; deixe "" para esconder
+  endereco: "Av. Mal. Floriano Peixoto, 2610 — Parolin, Curitiba/PR",
+  cep: "80220-000"
+};
+
+/* ==========================================================
+   GOOGLE ADS — conversões
+   Cole aqui o rótulo de cada ação de conversão criada no
+   Google Ads. Formato: "AW-18453307548/AbCdEfGhIj-KlMnOpQ"
+   Enquanto o rótulo estiver vazio, o evento é registrado no
+   dataLayer mas não conta como conversão no Ads.
+   ========================================================== */
+const ADS = {
+  id: "AW-18453307548",
+  whatsapp:   "",   // ação "Clique no WhatsApp"
+  formulario: "",   // ação "Formulário de orçamento"
+  valorLead:  0     // valor estimado do lead em BRL (opcional)
+};
+/* ========================================================== */
+/* ========================================================== */
+
+(function(){
+  const has = CONTATO.whatsapp && !/^55\d{2}0{5,}/.test(CONTATO.whatsapp);
+  const waBase = "https://wa.me/" + CONTATO.whatsapp;
+  const msgs = {
+    default: "Olá! Vim pelo site do Lord's Som e quero um orçamento de locação de equipamentos.",
+    igreja: "Olá! Vim pelo site do Lord's Som. Sou de uma igreja e preciso de orçamento para som, painel de LED e iluminação."
+  };
+
+  function waLink(msg){ return waBase + "?text=" + encodeURIComponent(msg); }
+
+  /* ---------- conversões Google Ads ---------- */
+  function conversao(tipo, origem){
+    if(typeof gtag !== "function") return;
+    var rotulo = ADS[tipo];
+    var dados = { event_category: "contato", event_label: origem || "" };
+    if(rotulo){
+      dados.send_to = rotulo;
+      if(ADS.valorLead){ dados.value = ADS.valorLead; dados.currency = "BRL"; }
+      gtag("event", "conversion", dados);
+    }
+    // evento nomeado — serve para GA4 e para importar como conversão depois
+    gtag("event", tipo === "whatsapp" ? "clique_whatsapp" : "envio_orcamento", dados);
+  }
+
+  // Liga todos os CTAs de WhatsApp
+  document.querySelectorAll("[data-wa]").forEach(function(el){
+    if(has){
+      el.setAttribute("href", waLink(msgs[el.dataset.msg] || msgs.default));
+      el.setAttribute("target","_blank");
+      el.setAttribute("rel","noopener");
+    }
+    el.addEventListener("click", function(){
+      conversao("whatsapp", el.dataset.msg || el.className || "cta");
+    });
+  });
+
+  // Contatos do rodapé
+  var fone = document.querySelector("[data-fone]");
+  if(fone) fone.textContent = has ? CONTATO.whatsappLabel : "WhatsApp — a definir";
+  var em = document.querySelector("[data-email]");
+  if(em){
+    if(CONTATO.email){ em.href = "mailto:" + CONTATO.email; em.querySelector("[data-emailtxt]").textContent = CONTATO.email; }
+    else { em.closest("li").remove(); }
+  }
+  var ig = document.querySelector("[data-ig]");
+  if(ig){
+    if(CONTATO.instagram){ ig.href = "https://instagram.com/" + CONTATO.instagram; ig.target="_blank"; ig.rel="noopener"; ig.querySelector("[data-igtxt]").textContent = "@" + CONTATO.instagram; }
+    else { ig.closest("li").remove(); }
+  }
+  document.querySelectorAll("[data-endereco]").forEach(function(el){ el.textContent = CONTATO.endereco; });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* ---------- formulário -> WhatsApp ---------- */
+  var form = document.getElementById("f");
+  var note = document.getElementById("fnote");
+
+  function setErr(input, on){
+    var f = input.closest(".field");
+    if(f) f.classList.toggle("err", on);
+  }
+  ["nome","fone","tipo"].forEach(function(id){
+    var el = document.getElementById(id);
+    el.addEventListener("blur", function(){ if(el.value.trim()) setErr(el,false); });
+    el.addEventListener("change", function(){ if(el.value.trim()) setErr(el,false); });
+  });
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var nome = document.getElementById("nome");
+    var fone = document.getElementById("fone");
+    var tipo = document.getElementById("tipo");
+    var bad = null;
+
+    var foneOk = fone.value.replace(/\D/g,"").length >= 10;
+    setErr(nome, !nome.value.trim());
+    setErr(fone, !foneOk);
+    setErr(tipo, !tipo.value);
+    if(!nome.value.trim()) bad = nome;
+    else if(!foneOk) bad = fone;
+    else if(!tipo.value) bad = tipo;
+
+    if(bad){ bad.focus(); note.textContent = "Faltou preencher um campo obrigatório."; return; }
+
+    var eq = Array.from(document.querySelectorAll('input[name="equipamentos"]:checked')).map(function(i){return i.value});
+    var op = (document.querySelector('input[name="operacao"]:checked')||{}).value || "";
+    var data = document.getElementById("data").value;
+    if(data){ var p = data.split("-"); data = p[2]+"/"+p[1]+"/"+p[0]; }
+
+    var L = [];
+    L.push("*Orçamento — Lord's Som*");
+    L.push("");
+    L.push("*Nome:* " + nome.value.trim());
+    L.push("*WhatsApp:* " + fone.value.trim());
+    L.push("*Evento:* " + tipo.value);
+    if(data) L.push("*Data:* " + data);
+    var local = document.getElementById("local").value.trim();
+    if(local) L.push("*Local:* " + local);
+    var pes = document.getElementById("pessoas").value.trim();
+    if(pes) L.push("*Pessoas:* " + pes);
+    if(eq.length) L.push("*Equipamentos:* " + eq.join(", "));
+    if(op) L.push("*Operação:* " + op);
+    var obs = document.getElementById("obs").value.trim();
+    if(obs){ L.push(""); L.push("*Detalhes:* " + obs); }
+
+    // 1) abre o WhatsApp de forma síncrona (evita bloqueio de pop-up)
+    conversao("formulario", tipo.value);
+    if(has) window.open(waLink(L.join("\n")), "_blank", "noopener");
+
+    // 2) registra o lead na Netlify (dispara e-mail para a equipe)
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    note.textContent = "Enviando seu pedido…";
+
+    var fd = new FormData(form);
+    fd.set("form-name", "orcamento");
+    fd.set("equipamentos", eq.join(", "));
+    if(data) fd.set("data-evento", data);
+
+    fetch("/", {
+      method: "POST",
+      headers: {"Content-Type":"application/x-www-form-urlencoded"},
+      body: new URLSearchParams(fd).toString()
+    }).then(function(r){
+      if(!r.ok) throw new Error(r.status);
+      form.reset();
+      note.textContent = has
+        ? "Pedido enviado. Se o WhatsApp não abriu, verifique o bloqueador de pop-ups."
+        : "Pedido enviado. Retornamos no mesmo dia útil.";
+    }).catch(function(){
+      note.textContent = has
+        ? "Seu pedido seguiu pelo WhatsApp. O envio por e-mail falhou — se preferir, tente de novo."
+        : "Não foi possível enviar agora. Chame no WhatsApp ou tente novamente em instantes.";
+    }).finally(function(){ btn.disabled = false; });
+  });
+
+})();
+</script>
+
+</body>
+</html>
