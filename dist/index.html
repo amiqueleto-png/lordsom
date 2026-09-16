@@ -752,9 +752,9 @@ const CONTATO = {
    dataLayer mas não conta como conversão no Ads.
    ========================================================== */
 const ADS = {
-  id: "AW-18453307548",
-  whatsapp:   "",   // ação "Clique no WhatsApp"
-  formulario: "",   // ação "Formulário de orçamento"
+  id:         "AW-18453307548",
+  whatsapp:   "AW-18453307548/IwCsCIWPmPocEJzBnN9E",   // ação "Clique no WhatsApp"
+  formulario: "AW-18453307548/0SKICIKPmPocEJzBnN9E",   // ação "Formulário de orçamento"
   valorLead:  0     // valor estimado do lead em BRL (opcional)
 };
 /* ========================================================== */
@@ -776,18 +776,21 @@ const ADS = {
     var rotulo = ADS[tipo];
     var dados = { event_category: "contato", event_label: origem || "" };
     if(rotulo){
-      dados.send_to = rotulo;
-      if(ADS.valorLead){ dados.value = ADS.valorLead; dados.currency = "BRL"; }
-      gtag("event", "conversion", dados);
+      // beacon garante o envio mesmo se a aba perder o foco ao abrir o WhatsApp
+      gtag("event", "conversion", Object.assign({ send_to: rotulo, transport_type: "beacon" },
+        ADS.valorLead ? { value: ADS.valorLead, currency: "BRL" } : {}, dados));
     }
     // evento nomeado — serve para GA4 e para importar como conversão depois
     gtag("event", tipo === "whatsapp" ? "clique_whatsapp" : "envio_orcamento", dados);
   }
 
-  // Liga todos os CTAs de WhatsApp
-  document.querySelectorAll("[data-wa]").forEach(function(el){
-    if(has){
+  // Liga todos os CTAs de WhatsApp — data-wa e qualquer link wa.me / api.whatsapp.com
+  var ctasWa = new Set(document.querySelectorAll('[data-wa], a[href*="wa.me"], a[href*="api.whatsapp.com"]'));
+  ctasWa.forEach(function(el){
+    if(has && el.hasAttribute("data-wa")){
       el.setAttribute("href", waLink(msgs[el.dataset.msg] || msgs.default));
+    }
+    if(el.tagName === "A"){
       el.setAttribute("target","_blank");
       el.setAttribute("rel","noopener");
     }
@@ -866,7 +869,6 @@ const ADS = {
     if(obs){ L.push(""); L.push("*Detalhes:* " + obs); }
 
     // 1) abre o WhatsApp de forma síncrona (evita bloqueio de pop-up)
-    conversao("formulario", tipo.value);
     if(has) window.open(waLink(L.join("\n")), "_blank", "noopener");
 
     // 2) registra o lead na Netlify (dispara e-mail para a equipe)
@@ -885,6 +887,8 @@ const ADS = {
       body: new URLSearchParams(fd).toString()
     }).then(function(r){
       if(!r.ok) throw new Error(r.status);
+      // conversão do formulário só depois do envio confirmado
+      conversao("formulario", tipo.value);
       form.reset();
       note.textContent = has
         ? "Pedido enviado. Se o WhatsApp não abriu, verifique o bloqueador de pop-ups."
